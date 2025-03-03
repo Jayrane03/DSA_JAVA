@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Input</title>
+</head>
+<body>
+    <script>
+        let input = prompt("Enter the number of Fibonacci terms to generate:");
+        const n = parseInt(input, 10);
+        if (isNaN(n) || n <= 0) {
+            alert("Please enter a valid positive number.");
+        } else {
+            printFibonacci(n);
+        }
+
+        function printFibonacci(num) {
+            let a = 0, b = 1, nextTerm;
+
+            console.log("First " + num + " Fibonacci numbers:");
+            for (let i = 1; i <= num; i++) {
+                console.log(a);
+                nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+            }
+        }
+    </script>
+</body>
+</html>
